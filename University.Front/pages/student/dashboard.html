@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Student Panel</h2>
+          <p id="studentName">Student</p>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-item active">📊 Dashboard</a>
+          <a href="courses.html" class="nav-item">📚 My Courses</a>
+          <a href="enrollment.html" class="nav-item">📝 Enroll Courses</a>
+          <a href="exams.html" class="nav-item">✏️ Exams</a>
+          <a href="attendance.html" class="nav-item">📅 Attendance</a>
+          <a href="profile.html" class="nav-item">👤 Profile</a>
+          <a href="#" class="nav-item" onclick="authService.logout()"
+            >🚪 Logout</a
+          >
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="header">
+          <h1>Student Dashboard</h1>
+          <div class="user-info">
+            <span class="user-name" id="userName">Student</span>
+            <button
+              class="btn btn-danger btn-sm"
+              onclick="authService.logout()"
+            >
+              Logout
+            </button>
+          </div>
+        </header>
+
+        <div class="stats-grid" id="statsGrid">
+          <div class="stat-card">
+            <div class="stat-label">Enrolled Courses</div>
+            <div class="stat-value" id="enrolledCourses">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Total Credit Hours</div>
+            <div class="stat-value" id="totalCredits">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Completed Exams</div>
+            <div class="stat-value" id="completedExams">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Attendance Rate</div>
+            <div class="stat-value" id="attendanceRate">0%</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>My Enrolled Courses</h2>
+          </div>
+          <div class="card-body" id="coursesList">
+            <div class="loading">Loading courses...</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Quick Actions</h2>
+          </div>
+          <div class="card-body">
+            <div class="btn-group">
+              <a href="enrollment.html" class="btn btn-primary"
+                >Enroll in Courses</a
+              >
+              <a href="exams.html" class="btn btn-primary">View Exams</a>
+              <a href="attendance.html" class="btn btn-primary"
+                >View Attendance</a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../js/config.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/api.js"></script>
+    <script src="../../js/student/dashboard.js"></script>
+  </body>
+</html>

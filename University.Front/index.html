@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Management System - Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <h1>University Management System</h1>
+          <p>Please login to continue</p>
+        </div>
+        <form id="loginForm" class="login-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="Enter your password"
+            />
+          </div>
+          <div
+            id="errorMessage"
+            class="error-message"
+            style="display: none"
+          ></div>
+          <button type="submit" class="btn btn-primary btn-full">Login</button>
+        </form>
+        <div class="demo-credentials">
+          <h3>Demo Credentials:</h3>
+          <div class="demo-grid">
+            <div class="demo-card">
+              <strong>Admin:</strong> amal@gmail.com / Password@123
+            </div>
+            <div class="demo-card">
+              <strong>Instructor:</strong> ali@gmail.com / Password@123
+            </div>
+            <div class="demo-card">
+              <strong>Student:</strong> mona@gmail.com / Password@123
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
